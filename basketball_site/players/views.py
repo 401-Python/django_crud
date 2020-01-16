@@ -1,7 +1,6 @@
-from django.views.generic import ListView, DetailView, CreateView, DeleteView
+from django.views.generic import ListView, DetailView, CreateView, DeleteView, UpdateView
 from .models import Player
 from django.urls import reverse_lazy
-from django.shortcuts import get_object_or_404
 # Create your views here.
 class PlayerListView(ListView):
   model = Player
@@ -20,6 +19,8 @@ class PlayerDeleteView(DeleteView):
   model = Player
   template_name = 'delete_players.html'
   success_url = reverse_lazy('home')
-  # def get_object(self):
-  #   id_ = self.kwargs.get('id')
-  #   return get_object_or_404(Player, id=id_)
+
+class PlayerUpdateView(UpdateView):
+  model = Player
+  template_name = 'edit_players.html'
+  fields = ['player_name', 'height', 'weight', 'position']

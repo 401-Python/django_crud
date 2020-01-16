@@ -6,6 +6,8 @@
   <p>Position: {{player.get_position_display}}</p>
   <p>Height: {{player.height}}</p>
   <p>Weight: {{player.weight}}</p>
+  <p><a href="{% url 'player_edit' player.id %}">Edit Player</a></p>
   <p><a href="{% url 'player_delete' player.id %}">Remove Player</a></p>
+
 </div>
 {% endblock content %} 
