@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Player Profiles</title>
+</head>
+
+<body>
+  <header>
+    <div>
+      <a href="{% url 'home' %}">Player Profiles</a>
+    </div>
+    <div>
+      <a href="{% url 'player_new' %}">New Player</a>
+    </div>
+  </header>
+  <div>
+    {% block content %}
+    {% endblock content %}
+  </div>
+</body>
+
+</html>

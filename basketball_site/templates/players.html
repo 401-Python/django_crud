@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+  <h2>{{player.player_name}}</h2>
+  <p>Position: {{player.get_position_display}}</p>
+  <p>Height: {{player.height}}</p>
+  <p>Weight: {{player.weight}}</p>
+  <p><a href="{% url 'player_delete' player.id %}">Remove Player</a></p>
+</div>
+{% endblock content %} 
